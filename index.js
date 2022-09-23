@@ -18,9 +18,7 @@ import chalk from 'chalk';
       },
     ]);
 
-    const [...args] = scripts[target].split(' ');
-
-    child.spawn(target, args);
+    child.spawn('npm run', target);
   } catch (error) {
     console.log(chalk.redBright('package.json'), 'not found.');
   }
