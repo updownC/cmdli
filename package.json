@@ -1,0 +1,23 @@
+{
+  "name": "cmdli",
+  "version": "0.1.0",
+  "description": "show all package scripts!",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "npm",
+    "cmd"
+  ],
+  "bin": {
+    "cmdli": "./index.js"
+  },
+  "author": "updownC",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.0.1",
+    "inquirer": "^9.1.2"
+  }
+}
