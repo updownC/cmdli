@@ -13,12 +13,14 @@ import chalk from 'chalk';
       {
         type: 'list',
         name: 'target',
-        message: 'Select a script to run\n -----------------------\n',
+        message: 'Select a script to run\n -----------------------',
         choices: Object.keys(scripts),
       },
     ]);
+    const cmd = scripts[target];
+    // const [cmd, ...args] = scripts[target].split(' ');
 
-    child.spawn('npm run', target);
+    child.spawn(cmd, { stdio: 'inherit' });
   } catch (error) {
     console.log(error);
     console.log(chalk.redBright('package.json'), 'not found.');
