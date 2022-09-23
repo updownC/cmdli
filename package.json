@@ -1,6 +1,6 @@
 {
   "name": "cmdli",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "show all package scripts!",
   "main": "index.js",
   "type": "module",

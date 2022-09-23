@@ -13,13 +13,14 @@ import chalk from 'chalk';
       {
         type: 'list',
         name: 'target',
-        message: 'Select a script to run\n -----------------------',
+        message: 'Select a script to run\n -----------------------\n',
         choices: Object.keys(scripts),
       },
     ]);
 
     child.spawn('npm run', target);
   } catch (error) {
+    console.log(error);
     console.log(chalk.redBright('package.json'), 'not found.');
   }
 })();
