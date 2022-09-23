@@ -5,15 +5,11 @@ Check all your package scripts and run them at once!
 
 ### Installation
 
----
-
 ```sh
 npm i -D cmdli
 ```
 
 ### How to Use
-
----
 
 1. run 'cmdli'
 
