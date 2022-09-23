@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import fs from 'fs';
-import * as child from 'child_process';
+import { spawn } from 'child_process';
 import inquirer from 'inquirer';
 import chalk from 'chalk';
 
@@ -13,15 +13,15 @@ import chalk from 'chalk';
       {
         type: 'list',
         name: 'target',
-        message: 'Select a script to run\n -----------------------',
+        message: `Select a script to run:`,
         choices: Object.keys(scripts),
+        loop: false,
       },
     ]);
 
-    const [cmd, ...args] = scripts[target].split(' ');
-
-    child.spawn(cmd, args, { stdio: 'inherit' });
+    spawn('npm', ['run', target], { stdio: 'inherit' });
   } catch (error) {
+    console.log(error);
     console.log(chalk.redBright('package.json'), 'not found.');
   }
 })();
