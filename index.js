@@ -13,7 +13,7 @@ import chalk from 'chalk';
       {
         type: 'list',
         name: 'target',
-        message: `Select a script to run\n ${chalk.green('[Selected]:')}`,
+        message: `Select a script to run:`,
         choices: Object.keys(scripts),
         loop: false,
       },
