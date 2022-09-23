@@ -20,10 +20,10 @@ cmdli
 2. read your scripts list and select one with keyboard interface.
 
 ```sh
-❔ Select a script to run :
-> start
+❓ Select a script to run :
+  start
   build
-  test
+> test
   eject
   //...etc
 ```
