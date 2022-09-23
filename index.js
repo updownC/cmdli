@@ -15,6 +15,7 @@ import chalk from 'chalk';
         name: 'target',
         message: `Select a script to run\n -----------------------\n ${chalk.green('selected: ')}`,
         choices: Object.keys(scripts),
+        loop: false,
       },
     ]);
 
