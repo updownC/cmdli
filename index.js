@@ -18,9 +18,9 @@ import chalk from 'chalk';
       },
     ]);
 
-    const [cmd, ...args] = scripts[target].split(' ');
+    const [...args] = scripts[target].split(' ');
 
-    child.spawn(cmd, args, { stdio: 'inherit' });
+    child.spawn(target, args);
   } catch (error) {
     console.log(chalk.redBright('package.json'), 'not found.');
   }
